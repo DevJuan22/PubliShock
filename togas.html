@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PubliShock - Togas y Birretes</title>
+    <link rel="stylesheet" href="css/tstyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="icon" href="img/LOGO.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
+
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');</style>
+<body>
+    <header>
+        <nav>
+           <a href="index.html"> <img src="/img/LOGO.png"   alt="Logo" class="logo"></a>
+            <ul>
+                <li><a href="togas.html">TOGAS Y BIRRETES</a></li>
+                <li><a href="foto.html">FOTOGRAFIA ARTISTICA</a></li>
+                <li><a href="fiesta.html">FIESTA PROM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-details">
+            <div class="info">
+                <h1>Togas y Birretes</h1>
+                <center><p>🎓✨ El día que has estado esperando está a la vuelta de la esquina. Después de años de esfuerzo y dedicación, es hora de celebrar tu logro como se merece. ¿Y qué mejor manera de hacerlo que con una toga y un birrete que reflejen tu orgullo y éxito?.</p></center>
+                <center><ul>
+                    <li>Material de alta calidad</li>
+                    <li>Disponible en varios colores</li>
+                    <li>Tallas personalizadas</li>
+                    <li>Accesorios adicionales disponibles</li>
+                </ul></center>
+            </div>
+            
+        </section>
+        <center><div class="gallery">
+            <!-- Carrusel principal (imagen grande) -->
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/T1.jpg" alt="Imagen 1"></div>
+                    <div class="swiper-slide"><img src="img/T2.jpg" alt="Imagen 2"></div>
+                    <div class="swiper-slide"><img src="img/T3.jpg" alt="Imagen 3"></div>
+                    <!-- Agrega más imágenes según sea necesario -->
+                </div></center>
+                <!-- Botones de navegación -->
+                
+            </div>
+            <!-- Carrusel de miniaturas -->
+            <center><div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/T1.jpg" alt="Imagen 1"></div>
+                    <div class="swiper-slide"><img src="img/T2.jpg" alt="Imagen 2"></div>
+                    <div class="swiper-slide"><img src="img/T3.jpg" alt="Imagen 3"></div>
+                    <!-- Agrega más miniaturas según sea necesario -->
+                </div></center>
+            </div>
+        </div>
+        
+        <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⭡</button>
+    </main>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <section class="image-gallery">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img/T3.jpg" alt="Descripción de la imagen 1" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/T2.jpg" alt="Descripción de la imagen 2" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/T1.jpg" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/Grupo110320x3023COPIAS.jpg" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/Recocha110120x3026COPIAS.jpg" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/Recocha110220x3024COPIAS.jpg" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/Recocha13X1910UNIDADES.jpg" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/RECOCHA13X196COPIAS.jpg" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/20.LAURAKAMILAPALACIOPABON.JPG" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/25.BRAYAMSNEIDERREMOLINACARDENAS.JPG" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/27.LAURAVALENTINAMOYANOPALENCIA.JPG" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="img/15.SirleyPereaPerea.JPG" alt="Descripción de la imagen 3" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer>
+            <div class="container">
+                <p>Copyright © 2024 PubliShock</p>
+            </div>
+            
+        </footer>
+</section>
+    <script>
+        let mybutton = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            const scrollDuration = 500; // Duración en milisegundos
+            const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+            const scrollInterval = setInterval(function(){
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            }, 15);
+        }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.carousel', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        
+    </script>
+<script>
+    // Inicializa el carrusel de miniaturas
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,  // Número de miniaturas visibles
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+
+    // Inicializa el carrusel principal
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs  // Conecta con el carrusel de miniaturas
+        }
+    });
+</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1 // Se activa cuando el 10% del elemento es visible
+  });
+
+  galleryItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+
+function openLightbox(imgElement) {
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = document.getElementById("lightbox-img");
+
+    lightbox.style.display = "block";
+    lightboxImg.src = imgElement.src;
+}
+
+var closeBtn = document.querySelector('.lightbox .close');
+closeBtn.onclick = function() {
+    var lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+}
+
+function handleScroll() {
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            item.classList.add('visible');
+        } else {
+            item.classList.remove('visible'); // Elimina la clase visible cuando el elemento ya no está en pantalla
+        }
+    });
+}
+
+// Llama a la función al cargar la página y cada vez que se haga scroll
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll); </script>
+</body>
+</html>

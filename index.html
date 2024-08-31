@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PubliShock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/LOGO.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');</style>
+    <header>
+        <nav>
+            <img src="/img/LOGO.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href= "togas.html">TOGAS Y BIRRETES</a></li>
+                <li><a href="foto.html">FOTOGRAFIA ARTISTICA</a></li>
+                <li><a href="fiesta.html">FIESTA PROM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="img/imagen1.jpeg" alt="Promoción">
+            <button onclick="toggleText()" class="toggle-btn">Sobre Nosotros</button>
+            <div id="sobreNosotros" class="hidden">
+                <h1>PUBLISHOCK</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem, 
+                    unde placeat provident odit possimus modi. Quas accusamus quae, aliquid, 
+                    tempora eius, laboriosam consectetur ut asperiores saepe animi libero blanditiis? Lorem, ipsum dolor sit 
+                    amet consectetur adipisicing elit. Unde neque facilis, repellat porro 
+                    voluptas omnis autem? Neque ullam, quibusdam dolor eius iste ex doloribus explicabo! Natus repudiandae
+                     deserunt eaque tempore.</p>
+            </div>
+        </section>
+        <section class="prom-2025">
+            <h1>🧑🏻‍🎓 Togas y birretes 🧑🏻‍🎓</h1>
+            <h2>📍 BOGOTÁ D.C</h2>
+            <div class="prom-images">
+                <img src="img/imagen3.jpeg" alt="Prom 2025 Image 1">
+                <img src="img/imagen2.jpeg" alt="Prom 2025 Image 2">
+            </div>
+        </section>
+
+        <section class="distrito-capital">
+            <h1>🎓 Nuestros productos 🎓</h1>
+            <h2></h2>
+            <div class="product-grid">
+                <a href="togas.html" class="product">
+                    <img src="img/Togas.jpg" alt="PROM 2024">
+                    <div class="product-info">Togas y birretes</div>
+                </a>
+                <a href="foto.html" class="product">
+                    <img src="img/camara.jpg" alt="Fotografía Artística">
+                    <div class="product-info">Fotografía Artística y retoque digital</div>
+                </a>
+                <a href="fiesta.html" class="product">
+                    <img src="img/fiesta.jpg" alt="Fiesta Prom">
+                    <div class="product-info">Fiesta Prom</div>
+                </a>
+            </div>
+        </section>
+        
+        <section class="asesoria">
+            <div class="container">
+                <h2>ACESORÍA VIRTUAL Y PRESENCIAL</h2>
+                <p>Programa tu visita presencial en Bogotá y conoce cada información detallada del proceso y asesoría de diseño.</p>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <div class="container">
+                <h2>PUBLISHOCK</h2>
+                <h3>♛ VISÍTANOS ♛</h3>
+                <p>LUN - VIE 8:00 am - 6:00 pm<br>SAB 9:00 am - 1:00 pm</p>
+                <a href="https://wa.me/+573134840777?text=Hola,%20estoy%20interesado%20en%20cotizar%20con%20ustedes,%20deseo%20m%C3%A1s%20informaci%C3%B3n" class="address">
+                    <p>Escríbenos por WhatsApp</p>
+                </a>
+            </div>
+        </section>
+        
+        
+        <footer>
+            <div class="container">
+                <p>Copyright © 2024 PubliShock</p>
+            </div>
+            <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⭡</button>
+        </footer>
+        
+        <script>
+            let mybutton = document.getElementById("scrollToTopBtn");
+
+            window.onscroll = function() {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                const scrollDuration = 500; // Duración en milisegundos
+                const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+                const scrollInterval = setInterval(function(){
+                    if (window.scrollY !== 0) {
+                        window.scrollBy(0, scrollStep);
+                    } else {
+                        clearInterval(scrollInterval);
+                    }
+                }, 15);
+            }
+        </script>
+        <script>
+            function toggleText() {
+                var x = document.getElementById("sobreNosotros");
+                if (x.classList.contains("hidden")) {
+                    x.classList.remove("hidden");
+                } else {
+                    x.classList.add("hidden");
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>
